@@ -1,19 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-
-const Nav = styled.nav`
-  background-color: #fffae1;
-  height: 50px;
-  width: 100%;
-`;
-const NavBar = (props) => {
-  return (
-    <div>
-      <Nav>
-        <div>하이</div>
-      </Nav>
-    </div>
-  );
-};
-
-export default NavBar;
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c5eca9cf3578d3432a4c280f714ba8ca8b39caac66573caf75b9b6aea96fa7b
+size 2694
