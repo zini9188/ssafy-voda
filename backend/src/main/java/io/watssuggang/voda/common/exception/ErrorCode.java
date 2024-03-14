@@ -1,17 +1,3 @@
-package io.watssuggang.voda.common.exception;
-
-import lombok.Getter;
-import org.springframework.http.HttpStatus;
-
-@Getter
-public enum ErrorCode {
-    ;
-
-    private final HttpStatus status;
-    private final String message;
-
-    ErrorCode(HttpStatus status, String message) {
-        this.status = status;
-        this.message = message;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24a81b97c270e4d92abe9843b5f0bba86e3fa4cfb0ac857ce354b5c7741a4adf
+size 520
