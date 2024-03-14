@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:47806d56ce52093e4d8ab4211438dc1c1e0c869719d9a56b379ca41d51e436e9
-size 234
+package io.watssuggang.voda.common.enums;
+
+public enum Emotion {
+    JOY("01"), ANGER("02"), SADNESS("03"), FEAR("04"), CURIOSITY("05");
+
+    public final String label;
+
+    Emotion(String label) {
+        this.label = label;
+    }
+}
