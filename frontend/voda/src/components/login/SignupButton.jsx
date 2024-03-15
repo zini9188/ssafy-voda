@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e6f9bb3ccb4a26b1179e642dacfaaeb22fd0a26a7dc26c81fc285f4574e68a1
-size 1650
+import React from "react"; // eslint-disable-line no-unused-vars
+import styled from "styled-components";
+// import useStore from "../../store/store";
+// import Button from '@mui/material';
+
+const Button = styled.button({
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: "#CAD6C0",
+  fontWeight: "bold",
+  border: "0px",
+  alignItems: "center",
+  width: "85%",
+  height: "2.5rem",
+  borderRadius: "10px",
+  marginTop: "20vh",
+});
+
+export default function SignupButton({ nickname }) {
+  return (
+    <>
+      <Button>회원가입</Button>
+    </>
+  );
+}
