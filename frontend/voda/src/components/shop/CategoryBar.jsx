@@ -1,3 +1,59 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0419ed9f6134d27e0a427447196eb2f9611a71020a59b1d9049d97308398356b
-size 1351
+import React, { useState } from "react";
+import styled from "styled-components";
+import usePetShopStore from "../../store/petStore";
+
+const Bar = styled.div({
+  marginTop: "1rem",
+  marginBottom: "1rem",
+  display: "flex",
+  justifyContent: "flex-start",
+  alignItems: "center",
+  width: "85%",
+  height: "2.5rem",
+  borderRadius: "2rem",
+  backgroundColor: "lightgray",
+  padding: "1rem",
+  gap: "0.5rem",
+});
+
+const Button = styled.div({
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: "gray",
+  fontWeight: "bold",
+  alignItems: "center",
+  borderRadius: "2rem",
+  height: "100%",
+  width: "25%",
+});
+
+const opacity = {
+  food: 0.5,
+  effect: 0.5,
+};
+
+export default function CategoryBar() {
+  const { currentCategory, setCurrentCategory } = usePetShopStore();
+  function clickHandler(e) {
+    setCurrentCategory(e.target.id);
+  }
+
+  return (
+    <Bar>
+      <Button
+        onClick={clickHandler}
+        id={"food"}
+        style={currentCategory === "food" ? { opacity: 1 } : { opacity: 0.5 }}
+      >
+        간식
+      </Button>
+      <Button
+        onClick={clickHandler}
+        id={"effect"}
+        style={currentCategory === "effect" ? { opacity: 1 } : { opacity: 0.5 }}
+      >
+        효과
+      </Button>
+    </Bar>
+  );
+}
