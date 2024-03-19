@@ -1,18 +1,3 @@
-import React from "react";
-import styled from "styled-components";
-
-const HeaderComponent = styled.div({
-  display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "center",
-  width: "85%",
-  borderBottom: "1px solid #ccc",
-});
-
-export default function Header() {
-  return (
-    <HeaderComponent>
-      <h3>상점</h3>
-    </HeaderComponent>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b540ed12e44abe711ae67f1a4f24dcd660eb6fbcb7d86e0734ed18e71076cacb
+size 875
