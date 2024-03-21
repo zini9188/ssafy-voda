@@ -1,33 +1,3 @@
-package io.watssuggang.voda.diary.domain;
-
-import io.watssuggang.voda.common.domain.*;
-import io.watssuggang.voda.common.enums.*;
-import jakarta.persistence.*;
-import lombok.*;
-
-@Entity
-@Getter
-@NoArgsConstructor
-public class Talk extends BaseEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer talkId;
-
-    @Column(columnDefinition = "text")
-    private String talkContent;
-
-    @Column(columnDefinition = "char(2)", length = 2)
-    private Speaker talkSpeaker;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "diary_id")
-    private Diary diary;
-
-    @Builder
-    public Talk(String talkContent, Speaker talkSpeaker, Diary diary) {
-        this.talkContent = talkContent;
-        this.talkSpeaker = talkSpeaker;
-        this.diary = diary;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f47272e1bf4c148df72bbb203f0b80115e8d68a4ac4ac0bc63c7db886d32aa5
+size 822
