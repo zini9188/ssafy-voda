@@ -1,13 +1,3 @@
-package io.watssuggang.voda.diary.repository;
-
-import io.watssuggang.voda.common.enums.*;
-import io.watssuggang.voda.diary.domain.*;
-import java.time.*;
-import java.util.*;
-
-public interface DiaryCustomRepository {
-
-    List<Diary> findDiariesByCondition(LocalDateTime start, LocalDateTime end, Emotion emotion,
-        int memberId);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6beab6f66808a6d8e7e8506aad1d46f1c9a914ecda0b85953af868279185f520
+size 338
