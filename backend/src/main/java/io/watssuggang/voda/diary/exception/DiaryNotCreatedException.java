@@ -1,12 +1,3 @@
-package io.watssuggang.voda.diary.exception;
-
-import io.watssuggang.voda.common.exception.BaseException;
-import io.watssuggang.voda.common.exception.ErrorCode;
-
-public class DiaryNotCreatedException extends BaseException {
-
-    public DiaryNotCreatedException(ErrorCode errorCode) {
-        super(errorCode);
-    }
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c376afc2a266929f5cef2edb740799360d42d32bb23155fe0b8685a37c28f96
+size 318
