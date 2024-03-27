@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1a94e9b17012a420ffd80d1b75e94f49b243b77238b9986a5d432bc6f9c15638
-size 497
+package io.watssuggang.voda;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableJpaAuditing
+@EnableScheduling
+public class VodaApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(VodaApplication.class, args);
+    }
+
+}
