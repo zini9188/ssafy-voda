@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c7b523deddcafaa34bdcecb2240a19fcabf6dcf64f4e0192d56340e3d0413ec0
-size 741
+package io.watssuggang.voda.common.scheduling;
+
+import io.watssuggang.voda.diary.service.DiaryService;
+import io.watssuggang.voda.member.service.MemberService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+@Slf4j
+@RequiredArgsConstructor
+@Component
+public class DiaryScheduler {
+
+    private final DiaryService diaryService;
+
+    /**
+     * 사용자가 하루에 일기를 쓴 횟수를 매일 자정에 초기화
+     */
+    @Scheduled(cron = "0 0 0 * * *")
+    public void deleteKeysWithTodaySchedule() {
+        diaryService.deleteKeysWithToday();
+        log.info("delete Keys With Today");
+    }
+}
