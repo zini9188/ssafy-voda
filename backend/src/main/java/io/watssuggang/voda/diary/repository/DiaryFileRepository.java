@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ceea33fc4e93a07bcaf5a0ecda489321bfb2adcb602912df68870d85aa8cb289
-size 501
+package io.watssuggang.voda.diary.repository;
+
+import io.watssuggang.voda.diary.domain.Diary;
+import io.watssuggang.voda.diary.domain.DiaryFile;
+import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface DiaryFileRepository extends JpaRepository<DiaryFile, Integer> {
+    @Query("SELECT df FROM DiaryFile df WHERE df.diary.diaryId = :diaryId")
+    List<DiaryFile> findFilesByDiaryId(Integer diaryId);
+}
