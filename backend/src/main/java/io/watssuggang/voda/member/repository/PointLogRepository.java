@@ -1,13 +1,3 @@
-package io.watssuggang.voda.member.repository;
-
-import io.watssuggang.voda.common.enums.PointLogType;
-import io.watssuggang.voda.member.domain.PointLog;
-import java.util.List;
-import org.springframework.data.mongodb.repository.MongoRepository;
-import org.springframework.stereotype.Repository;
-
-@Repository
-public interface PointLogRepository extends MongoRepository<PointLog, String> {
-
-    List<PointLog> findAllByMemberIdAndType(Integer memberId, PointLogType type);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cf73496a8eabb44ac691faf9c4b05a6df9c2264deab8484c8d1d92a030c1ac5
+size 472

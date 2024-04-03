@@ -1,23 +1,3 @@
-package io.watssuggang.voda.member.service;
-
-import io.watssuggang.voda.common.enums.PointLogType;
-import io.watssuggang.voda.member.domain.PointLog;
-import io.watssuggang.voda.member.repository.PointLogRepository;
-import java.util.List;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-
-@Service
-@RequiredArgsConstructor
-public class PointLogService {
-
-    private final PointLogRepository pointLogRepository;
-
-    public void makePointLog(PointLog pl) {
-        pointLogRepository.save(pl);
-    }
-
-    public List<PointLog> selectAll(Integer memberId, PointLogType pointLogType) {
-        return pointLogRepository.findAllByMemberIdAndType(memberId, pointLogType);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:02eb860bed17b644be207d30ffd7a0e3f34bf4bc3df9c60a241314540548e21e
+size 712
